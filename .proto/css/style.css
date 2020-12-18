@@ -1,0 +1,199 @@
+:root {
+    --bg-main: #f3ede2;
+    --bg-header: #778a35;
+    --bg-nav: #26190c;
+    --nav-hover: #ccb8a3;
+    --bg-aside: #dce5b8;
+    --link: #586627;
+    --header-font: 'Asul', sans-serif;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+    
+html {
+    font-size: 16px;
+}
+    
+body {
+    font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+
+.container {
+    min-height: 100vh;
+    display: grid;
+
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto 1fr auto;
+    grid-template-areas: 
+        "header"
+        "nav"
+        "content"
+        "footer";
+
+    gap: 0px;
+}
+
+
+
+.container {
+    background-color: var(--bg-main);
+}
+
+header {
+    background-color: var(--bg-header);
+    padding: 30px 0;
+}
+
+.title {
+    font-family: var(--header-font);
+    font-size: 3rem;
+    font-variant: small-caps;
+}
+
+nav {
+    background-color: var(--bg-nav);
+}
+
+nav ul {
+    margin: 0 auto;
+}
+
+nav li {
+    display: inline-block;
+}
+
+nav a {
+    display: inline-block;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color: var(--nav-hover);
+    color: black;
+}
+
+
+
+.content {
+    /* background-color: maroon; */
+}
+
+main, aside {
+    padding: 20px;
+}
+
+main p, aside p {
+    line-height: 1.5rem;
+    margin-bottom: 1.25rem;
+}
+
+main a, aside a {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+main a:link, aside a:link {
+    color: var(--link);
+}
+
+main a:hover, aside a:hover {
+    background-color: var(--bg-nav);
+    outline: 2px solid var(--bg-nav);
+    color: white;
+}
+
+main a:visited, aside a:visited {
+    color: gray;
+}
+
+main {
+    background-color: var(--bg-main);
+}
+
+aside {
+    background-color: var(--bg-aside);
+    border-left: 2px dotted var(--bg-header);
+    border-right: 2px dotted var(--bg-header);
+}
+
+aside p {
+    font-size: .8rem;
+}
+
+
+footer {
+    background-color: var(--bg-nav);
+    padding: 10px 0;
+    line-height: 1.25rem;
+    font-size: 0.6875rem;
+    text-transform: uppercase;
+    color: white;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+.inner {
+    /* background-color: rebeccapurple; */
+}
+
+
+
+header, nav, footer {
+    text-align: center;
+}
+
+
+
+
+
+
+.inner {
+    margin: 0 auto;
+    width: 90%;
+    max-width: 1280px;
+}
+
+.sidebar {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.sidebar main {
+    width: 70%;
+}
+
+.sidebar aside {
+    width: 30%;
+}
+
+
+h2, h3 {
+    font-family: var(--header-font);
+    margin-bottom: 1rem;
+    margin-left: -2px;
+}
+h2 {
+    font-size: 2rem;
+}
+h3 {
+    font-size: 1.6rem;
+}
