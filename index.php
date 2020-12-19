@@ -25,7 +25,7 @@ include('includes/header.php');
 
 <main>
 
-<h2>Welcome to our home page.</h2>
+<!-- <h2>Welcome!</h2> -->
 
 <?php 
 // notification message
@@ -50,10 +50,10 @@ if( isset($_SESSION['success']) ) : ?>
 if( isset($_SESSION['UserName']) ) : ?>
 
     <div class="error success">
-        <h3>Welcome, <?php echo $_SESSION['UserName']; ?></h3>
+        <h3>Welcome, <?php echo $_SESSION['UserName']; ?>.</h3>
     </div>
 
-    <p><a href="index.php?logout=1">Log out</a></p>
+    <p><a href="index.php?logout=1">Log out</a>.</p>
 
 <?php endif; ?>
 

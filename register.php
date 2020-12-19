@@ -6,43 +6,43 @@
 
 <main>
 
-<h2>Register Today!</h2>
+<h2 class="center">Register Today!</h2>
 
 <form action="<?php echo htmlspecialchars( $_SERVER['PHP_SELF'] ); ?>" method="POST">
 
-    <label>
+    <label class="label-input">
         First Name
         <input type="text" name="FirstName" value="<?php if( isset($_POST['FirstName']) ) echo $_POST['FirstName']; ?>" />
     </label>
 
-    <label>
+    <label class="label-input">
         Last Name
         <input type="text" name="LastName" value="<?php if( isset($_POST['LastName']) ) echo $_POST['LastName']; ?>" />
     </label>
 
-    <label>
+    <label class="label-input">
         Email
         <input type="email" name="Email" value="<?php if( isset($_POST['Email']) ) echo $_POST['Email']; ?>" />
     </label>
 
-    <label>
+    <label class="label-input">
         User Name
         <input type="text" name="UserName" value="<?php if( isset($_POST['UserName']) ) echo $_POST['UserName']; ?>" />
     </label>
 
-    <label>
+    <label class="label-input">
         Password
         <input type="password" name="Password1" value="" />
     </label>
 
-    <label>
+    <label class="label-input">
         Confirm Password
         <input type="password" name="Password2" value="" />
     </label>
 
-    <button type="submit" class="button" name="reg_user">Register</button>
+    <button class="button" type="submit" name="login_user">Login</button>
 
-    <button type="button" onclick="window.location.href = '<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>'">Reset</button>
+    <button class="button" type="button" onclick="window.location.href = '<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>'">Reset</button>
 
 
     <?php include('errors.php'); ?>

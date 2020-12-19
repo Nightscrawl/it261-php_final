@@ -6,7 +6,7 @@
 
 <main>
 
-    <h2>Login</h2>
+    <h2 class="center">Login</h2>
 
     <form action="<?php echo htmlspecialchars( $_SERVER['PHP_SELF'] ); ?>" method="POST">
 
@@ -21,9 +21,9 @@
 
         <?php include('errors.php'); ?>
 
-        <button type="submit" class="button" name="login_user">Login</button>
+        <button class="button" type="submit" name="login_user">Login</button>
 
-        <button type="button" onclick="window.location.href = '<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>'">Reset</button>
+        <button class="button" type="button" onclick="window.location.href = '<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>'">Reset</button>
 
     </form>
 

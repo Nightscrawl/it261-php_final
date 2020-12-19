@@ -110,6 +110,6 @@
 
     <input type="submit" value="Send" /> 
 
-    <span class="reset"><a href="">Reset Form</a></span>
+    <button class="button" type="button" onclick="window.location.href = '<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>'">Reset</button>
     
 </form> 

@@ -202,7 +202,7 @@ h3 {
 
 /* FORM */
 
-form {
+form, .login {
     margin: 40px auto 20px;
     max-width: 550px;
     /* border: 1px solid green; */
@@ -221,7 +221,7 @@ input, select, textarea {
     margin: 4px 0;
 }
 
-input[type=text], input[type=email], textarea {
+input[type=text], input[type=email], textarea, input[type=password] {
     width: 100%;
     padding: 8px;
     background-color: white;
@@ -234,14 +234,14 @@ select {
     padding: 4px;
 }
 
-input[type=submit] {
+input[type=submit], .button {
     padding: 3px 9px;
     background-color: var(--bg-aside);
     border: 1px solid var(--bg-header);
     font-size: 1rem;
 }
 
-input[type=submit]:hover {
+input[type=submit]:hover, .button:hover {
     background-color: var(--bg-nav);
     border: 1px solid var(--bg-nav);
     color: white;
