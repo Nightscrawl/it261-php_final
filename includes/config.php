@@ -11,10 +11,18 @@ define( 'THIS_PAGE', basename($_SERVER['PHP_SELF']) );  // the page that i'm on 
 
 switch(THIS_PAGE) {
     case 'index.php' :
-        $title = 'Home page for our new website';
-        $mainHeadline = 'Welcome to Our Home Page';
-        // $center = 'center';
-        // $body = 'home';
+        $title = 'Tevinter Teas';
+        $layout = 'single';
+    break;
+
+    case 'login.php' :
+        $title = 'Tevinter Teas | Login';
+        $layout = 'single';
+    break;
+
+    case 'register.php' :
+        $title = 'Tevinter Teas | Register';
+        $layout = 'single';
     break;
 
     case 'about.php' :
