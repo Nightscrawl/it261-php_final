@@ -1,5 +1,11 @@
 <?php
 
+ob_start();  // prevents header errors before reading the whole page
+
+define('DEBUG', 'TRUE');  // shows errors
+
+include('creds.php');
+
 define( 'THIS_PAGE', basename($_SERVER['PHP_SELF']) );  // the page that i'm on is the page that i'm on
 
 
@@ -32,11 +38,9 @@ switch(THIS_PAGE) {
         // $body = 'customers inner';
     break;
 
-    case 'gallery.php' :
-        $title = 'Check out our gallery';
-        $mainHeadline = '';
-        // $center = 'center';
-        // $body = 'gallery inner';
+    case 'teas.php' :
+        $title = 'Tevinter Teas | Teas';
+        $layout = 'single';
     break;
 
     case 'contact.php' :
@@ -57,8 +61,7 @@ switch(THIS_PAGE) {
 $nav['index.php'] = 'Home';
 $nav['about.php'] = 'About';
 $nav['daily.php'] = 'Daily';
-$nav['customers.php'] = 'Customers';
-$nav['gallery.php'] = 'Gallery';
+$nav['teas.php'] = 'Teas';
 $nav['contact.php'] = 'Contact';
 
 function makeLinks($n) {
@@ -209,3 +212,21 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {  // IF server has a request method of
         } // end isset
 
 } // close server request method
+
+
+
+
+// ERRORS
+
+function myerror($myFile, $myLine, $errorMsg) {
+    if( defined('DEBUG') && DEBUG ) {
+        echo 'Error in file: <b>' .$myFile. '</b> on line: <b>' .$myLine. '</b>';
+        echo 'Error message: <b>' .$errorMsg. '</b>';
+        die();
+    } else {
+        echo 'Houston, we have a problem!';
+        die();
+    }
+}
+
+
