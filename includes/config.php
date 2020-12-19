@@ -200,7 +200,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {  // IF server has a request method of
         $_POST['comments'],
         $_POST['privacy']) ) {
 
-            $to = 'kaynbell@gmail.com';
+            $to = 'szemeo@mystudentswa.com';
             $subject = 'Webform from Tevinter Teas on ' . date('m/d/y');
             $body = ''.$firstName. ' ' .$lastName. ' has filled out your form.' .PHP_EOL.'';
             $body .= 'Email: ' .$email. '' .PHP_EOL.'';
